@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {GlTemplate} from "gitlanding/GlTemplate";
+import {Header} from "./Header";
+import {GlHero} from "gitlanding/GlHero";
+import heroImageUrl from "./assets/img/hero-image.png";
+
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GlTemplate
+      header={<Header />}
+    >
+      <GlHero
+        title="Git Landing"
+        subTitle="Set up a stylish landing page for your project in just a few minutes"
+        imageSrc={heroImageUrl}
+      />
+    </GlTemplate>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
