@@ -49,6 +49,7 @@ ReactDOM.render(
             type="code"
             language="jsx"
             showLineNumbers={true}
+            hasDecorativeVsCodeButtons={true}
             text={`import {GlSection} from "gitlanding/GlSection"
 import {GlArticle} from "gitlanding/GlSection/GlArticle"
 import {GlAside} from "gitlanding/GlSection/GlAside";
@@ -87,6 +88,7 @@ import {GlAside} from "gitlanding/GlSection/GlAside";
             type="code"
             language="jsx"
             showLineNumbers={true}
+            hasDecorativeVsCodeButtons={true}
             text={`import {GlLogoCard} from "gitlanding/GlCards/GlLogoCard";
 <GlLogoCard
 	iconUrls={[yourIconUrl]}
