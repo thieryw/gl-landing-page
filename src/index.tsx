@@ -8,8 +8,8 @@ import {Cards} from "./Cards";
 import {GlSection} from "gitlanding/GlSection"
 import {GlArticle} from "gitlanding/GlSection/GlArticle"
 import {GlAside} from "gitlanding/GlSection/GlAside";
-
-
+import {GlFooter} from "gitlanding/GlFooter";
+import {GlFooterBottomDiv} from "gitlanding/GlFooter/GlFooterBottomDiv";
 
 
 
@@ -31,8 +31,8 @@ ReactDOM.render(
             title="GlSection Example"
             articleMd={
               [
-                "This an example of how to set up a ",
-                "GitLanding section with the full code and imports. ",
+                "This is an example of how to set up a ",
+                `**gitlanding** section with the full code and imports. `,
                 "Follow the link bellow to view on Storybook"
               ].join("")
             }
@@ -122,6 +122,26 @@ import {GlAside} from "gitlanding/GlSection/GlAside";
       />
 
       <Cards />
+
+      <GlFooter 
+        links={
+          [
+            {
+              "title": "Github",
+              "href": "https://github.com/thieryw/gitlanding"
+            },
+            {
+              "title": "Documentation",
+              "href": "https://docs.gitlanding.dev/"
+            },
+            {
+              "title": "Storybook",
+              "href": "https://sb.gitlanding.dev"
+            }
+          ]
+        }
+        bottomDiv={<GlFooterBottomDiv contentMd="M.I.T Licence"/>}
+      />
 
     </GlTemplate>
   </React.StrictMode>,
