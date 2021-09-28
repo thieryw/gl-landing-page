@@ -33,14 +33,18 @@ export const Header = memo(()=>{
 	return (
 		<GlHeader
 			links={menuItems}
-			title={<h3 style={{
+			title={<h3 onClick={()=> window.location.href = "#"} style={{
 				"fontSize": "40px",
 				"margin": 0,
-				"fontWeight": "lighter"
+				"fontWeight": "lighter",
+				"cursor": "pointer"
 			}}>{"</>"} GL</h3>}
 			enableDarkModeSwitch={true}
 			githubRepoUrl="https://github.com/thieryw/gitlanding"
 			githubButtonSize="large"
+			isCollapsible={true}
+			
+
 		/>
 	)
 

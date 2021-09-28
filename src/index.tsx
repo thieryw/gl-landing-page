@@ -4,144 +4,75 @@ import {GlTemplate} from "gitlanding/GlTemplate";
 import {Header} from "./Header";
 import {GlHero} from "gitlanding/GlHero";
 import heroImageUrl from "./assets/img/hero-image.png";
-import {Cards} from "./Cards";
-import {GlSection} from "gitlanding/GlSection"
-import {GlArticle} from "gitlanding/GlSection/GlArticle"
-import {GlAside} from "gitlanding/GlSection/GlAside";
+//import {Cards} from "./Cards";
+import {GlArticle} from "gitlanding/GlArticle"
+import {GlIllustration} from "gitlanding/GlIllustration"
 import {GlFooter} from "gitlanding/GlFooter";
 import {GlFooterBottomDiv} from "gitlanding/GlFooter/GlFooterBottomDiv";
+import exampleGif from "./assets/img/example.gif";
 
 
 
 ReactDOM.render(
   <React.StrictMode>
     <GlTemplate
+      headerOptions={{
+        "position": "fixed",
+        "isRetracted": "smart"
+
+      }}
       header={<Header />}
+      footer={
+
+        <GlFooter
+          links={
+            [
+              {
+                "title": "Github",
+                "href": "https://github.com/thieryw/gitlanding"
+              },
+              {
+                "title": "Documentation",
+                "href": "https://docs.gitlanding.dev/"
+              },
+              {
+                "title": "Storybook",
+                "href": "https://sb.gitlanding.dev"
+              }
+            ]
+          }
+          bottomDiv={<GlFooterBottomDiv contentMd="M.I.T Licence" />}
+        />
+      }
     >
       <GlHero
-        title="Git Landing"
-        subTitle="Set up a stylish landing page for your project in just a few minutes"
+        title="A stylish landing page for open source projects"
+        subTitle="GitLanding enables you to create a landing page in a matter of minutes."
         imageSrc={heroImageUrl}
       />
 
-      <GlSection
-        heading="A few examples to get you enthralled"
-        article={
-          <GlArticle
-            title="GlSection Example"
-            articleMd={
-              [
-                "This is an example of how to set up a ",
-                `**gitlanding** section with the full code and imports. `,
-                "Follow the link bellow to view on Storybook"
-              ].join("")
-            }
-            buttonLabel="Storybook"
-            buttonLink={{
-              "href": "https://sb.gitlanding.dev/?path=/story/glsection-glsection--vue-with-code"
-            }}
+      <GlArticle 
+        title="A brief explanation"
+        illustrationPosition="left"
+        body={`**Gitlanding** is an **open source** **React** module that enables you to stylishly show case your open projects in but a few minutes.
+you can easily use it by creating a react project and hosting if for free thanks to **Github Pages**.
+
+To further increase efficiency, we use typescript for that nice inference that makes it easy to pick up.
+        `}
+        illustration={
+          <GlIllustration 
+            type="image"
+            url={exampleGif}
           />
         }
-
-
-        aside={
-          <GlAside
-            type="code"
-            language="jsx"
-            showLineNumbers={true}
-            hasDecorativeVsCodeButtons={true}
-            text={`import {GlSection} from "gitlanding/GlSection"
-import {GlArticle} from "gitlanding/GlSection/GlArticle"
-import {GlAside} from "gitlanding/GlSection/GlAside";
-
-<GlSection
-  heading="Your heading"
-  article={
-    <GlArticle
-      title="Your Title"
-      articleMd="Your Article"
-      buttonLabel="Your Label"
-    />
-  }
-    
-  aside={
-    <GlAside
-      type="code"
-      language="ts"
-      showLineNumbers={true}
-      text={\`
-          function sum(x: number; y: number){
-              return x+y;
-    
-          }
-      \`}
-    />
-  }
-/>`}
-          />
-        }
+        hasAnimation={true}
+        buttonLabel="See example project"
+        buttonLink={{
+          "href": "https://www.sspcloud.fr/"
+        }}
       />
 
-      <GlSection 
-        article={
-          <GlAside 
-            type="code"
-            language="jsx"
-            showLineNumbers={true}
-            hasDecorativeVsCodeButtons={true}
-            text={`import {GlLogoCard} from "gitlanding/GlCards/GlLogoCard";
-<GlLogoCard
-	iconUrls={[yourIconUrl]}
-	title="Your Project Name"
-	paragraph="A description for your Project"
-	link={{
-		"href": "The link for your project"
-	}}
-/>`}
-          />
-        }
 
-        aside={
-          <GlArticle 
-            title="GlCard Example"
-            articleMd={[
-              "This example shows you how to easily create ",
-              "a stylish looking card to showcase a project. ",
-              `Go to **Storybook** in the link bellow if you want `,
-              "more sophisticated examples."
-
-            ].join("")}
-
-            buttonLabel="Storybook"
-            buttonLink={{
-              "href": "https://sb.gitlanding.dev/?path=/story/glcards-glcards--vue"
-            }}
-          />
-        }
-
-      />
-
-      <Cards />
-
-      <GlFooter 
-        links={
-          [
-            {
-              "title": "Github",
-              "href": "https://github.com/thieryw/gitlanding"
-            },
-            {
-              "title": "Documentation",
-              "href": "https://docs.gitlanding.dev/"
-            },
-            {
-              "title": "Storybook",
-              "href": "https://sb.gitlanding.dev"
-            }
-          ]
-        }
-        bottomDiv={<GlFooterBottomDiv contentMd="M.I.T Licence"/>}
-      />
 
     </GlTemplate>
   </React.StrictMode>,
