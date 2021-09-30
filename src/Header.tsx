@@ -1,7 +1,17 @@
 import {GlHeader} from "gitlanding/GlHeader";
 import type {GlHeaderProps} from "gitlanding/GlHeader";
 import {memo, useMemo} from "react";
+import logoPng from "./assets/svg/logo.png";
+import {makeStyles} from "gitlanding/theme";
 
+const useStyles = makeStyles()(
+	theme => ({
+		"logo": {
+			"cursor": "pointer",
+			"height": theme.spacing(6)
+		}
+	})
+)
 
 export const Header = memo(()=>{
 
@@ -29,16 +39,13 @@ export const Header = memo(()=>{
 
 	}, [])
 
+	const {classes} = useStyles()
+
 
 	return (
 		<GlHeader
 			links={menuItems}
-			title={<h3 onClick={()=> window.location.href = "#"} style={{
-				"fontSize": "40px",
-				"margin": 0,
-				"fontWeight": "lighter",
-				"cursor": "pointer"
-			}}>{"</>"} GL</h3>}
+			title={<img src={logoPng} onClick={()=> window.location.href = "#"} className={classes.logo} alt="logo"/>}
 			enableDarkModeSwitch={true}
 			githubRepoUrl="https://github.com/thieryw/gitlanding"
 			githubButtonSize="large"
