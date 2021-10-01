@@ -53,8 +53,8 @@ ReactDOM.render(
       }
     >
       <GlHero
-        title="A stylish landing page for open source projects"
-        subTitle="GitLanding is a completely open source library that enables you to create a landing page in a matter of minutes."
+        title="A stylish landing page for your github repo"
+        subTitle="It's all MIT, no paid plan, no hosting fees, it will go on Github Pages"
         imageSrc={heroImageUrl}
         hasLinkToSectionBellow={true}
         linkToSectionBellowId="sectionBellow"
@@ -63,13 +63,12 @@ ReactDOM.render(
 
       <GlArticle 
         id="sectionBellow"
-        title="A brief explanation"
+        title="You are looking at a page created with Gitlanding"
         illustrationPosition="left"
-        body={`**Gitlanding** is an **open source** **React** module that enables you to stylishly show case your open source projects in a minimum amount of time.
-you can easily use it by creating a react project and hosting if for free thanks to **Github Pages**.
+        body={`Get started in but a few minutes by creating a **React App** and publishing it for free on **Github Pages**. 
 
-To further increase efficiency, we use typescript for that nice inference that makes it easy to pick up.
-        `}
+See the documentation for a quick setup guide.
+`}
         illustration={
           <GlIllustration 
             type="image"
@@ -78,9 +77,9 @@ To further increase efficiency, we use typescript for that nice inference that m
           />
         }
         hasAnimation={true}
-        buttonLabel="See example project"
+        buttonLabel="Documentation"
         buttonLink={{
-          "href": "https://www.sspcloud.fr/"
+          "href": "https://docs.gitlanding.dev/getting-started"
         }}
       />
       <GlSectionDivider />
@@ -98,9 +97,9 @@ For example you might want to have a routing system put in place. And you can ev
             hasShadow={true}
           />
         }
-        buttonLabel="Documentation"
+        buttonLabel="See Example Project"
         buttonLink={{
-          "href": "https://docs.gitlanding.dev/"
+          "href": "https://www.sspcloud.fr/"
         }}
 
       />
