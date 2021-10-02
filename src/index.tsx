@@ -7,7 +7,6 @@ import heroImageUrl from "./assets/img/hero-image.png";
 import {GlArticle} from "gitlanding/GlArticle"
 import {GlIllustration} from "gitlanding/GlIllustration"
 import {GlFooter} from "gitlanding/GlFooter";
-import {GlFooterBottomDiv} from "gitlanding/GlFooter/GlFooterBottomDiv";
 import exampleGif from "./assets/img/example.gif";
 import {GlSectionDivider} from "gitlanding/GlSectionDivider";
 import {GlCards} from "gitlanding/GlCards"
@@ -48,7 +47,7 @@ ReactDOM.render(
               }
             ]
           }
-          bottomDiv={<GlFooterBottomDiv contentMd="M.I.T Licence" />}
+          bottomDivContent="M.I.T Licence"
         />
       }
     >
@@ -56,8 +55,7 @@ ReactDOM.render(
         title="A stylish landing page for your github repo"
         subTitle="It's all MIT, no paid plan, no hosting fees, it will go on Github Pages"
         imageSrc={heroImageUrl}
-        hasLinkToSectionBellow={true}
-        linkToSectionBellowId="sectionBellow"
+        linkToSectionBelowId="sectionBellow"
         hasImageShadow={true}
       />
 
